@@ -1,9 +1,12 @@
 const form = document.getElementById('addForm');
+const showForm = document.getElementById('showForm');
 const itemList = document.getElementById('items');
 const filter = document.getElementById('filter');
 
 // Form submit event
 form.addEventListener('submit', addItem);
+// Show event
+showForm.addEventListener('submit', showItem);
 // Delete event
 itemList.addEventListener('click', removeItem);
 // Filter event
@@ -64,4 +67,19 @@ function filterItems(e) {
       item.style.display = 'none';
     }
   });
+}
+
+// Show item
+function showItem(e) {
+  e.preventDefault();
+
+  const item = document.getElementById('show').value;
+  const container = document.getElementById('container');
+
+  container.style.display = 'none';
+
+  const newP = document.createElement('p');
+  newP.appendChild(document.createTextNode(item));
+
+  document.body.appendChild(newP);
 }
