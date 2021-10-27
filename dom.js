@@ -65,17 +65,40 @@
 
 // container.insertBefore(newDiv, h1);
 
-const button = document
-  .getElementById('button')
-  .addEventListener('click', e => buttonClick(e));
+// const button = document
+//   .getElementById('button')
+//   .addEventListener('click', e => buttonClick(e));
 
-const buttonClick = e => {
-  // document.getElementById('header-title').textContent = 'changed';
-  // document.querySelector('#main').style.backgroundColor = '#f4f4f4';
+// const buttonClick = e => {
+//   // document.getElementById('header-title').textContent = 'changed';
+//   // document.querySelector('#main').style.backgroundColor = '#f4f4f4';
+//   // console.log(e.target);
+//   // console.log(e.target.id);
+//   // console.log(e.target.className);
+//   // const output = document.getElementById('output');
+//   // output.innerHTML = '<h3>' + e.target.id + '</h3>';
+//   // console.log(e.type);
+//   // console.log(e.clientX);
+//   // console.log(e.clientY);
+//   // console.log(e.offsetX);
+//   // console.log(e.offsetY);
+// };
 
-  console.log(e.target);
-  console.log(e.target.id);
-  console.log(e.target.className);
-  const output = document.getElementById('output');
-  output.innerHTML = '<h3>' + e.target.id + '</h3>';
-};
+const button = document.getElementById('button');
+const box = document.getElementById('box');
+
+// button.addEventListener('dblclick', e => runEvent(e));
+// button.addEventListener('mousedown', e => runEvent(e));
+// button.addEventListener('mouseup', e => runEvent(e));
+
+function runEvent(e) {
+  console.log('EVENT TYPE: ' + e.type);
+
+  box.style.backgroundColor = 'rgb(' + e.offsetX + ',' + e.offsetY + ', 40)';
+}
+
+box.addEventListener('mousemove', runEvent);
+// box.addEventListener('mouseleave', runEvent);
+
+// box.addEventListener('mouseover', runEvent); // fires when hovering over content
+// box.addEventListener('mouseout', runEvent);
