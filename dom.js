@@ -84,21 +84,31 @@
 //   // console.log(e.offsetY);
 // };
 
-const button = document.getElementById('button');
-const box = document.getElementById('box');
+// const button = document.getElementById('button');
+// const box = document.getElementById('box');
 
 // button.addEventListener('dblclick', e => runEvent(e));
 // button.addEventListener('mousedown', e => runEvent(e));
 // button.addEventListener('mouseup', e => runEvent(e));
 
-function runEvent(e) {
-  console.log('EVENT TYPE: ' + e.type);
+// function runEvent(e) {
+//   console.log('EVENT TYPE: ' + e.type);
 
-  box.style.backgroundColor = 'rgb(' + e.offsetX + ',' + e.offsetY + ', 40)';
-}
+//   box.style.backgroundColor = 'rgb(' + e.offsetX + ',' + e.offsetY + ', 40)';
+// }
 
-box.addEventListener('mousemove', runEvent);
+// box.addEventListener('mousemove', runEvent);
 // box.addEventListener('mouseleave', runEvent);
 
 // box.addEventListener('mouseover', runEvent); // fires when hovering over content
 // box.addEventListener('mouseout', runEvent);
+
+const itemInput = document.querySelector('input[type="text"]');
+const form = document.querySelectorAll('form');
+
+itemInput.addEventListener('keydown', runEvent);
+
+function runEvent(e) {
+  document.getElementById('output').innerHTML =
+    '<h3>' + e.target.value + '</h3>';
+}
