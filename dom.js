@@ -18,20 +18,35 @@
 
 // querySelector
 
-const header = document.querySelector('#main-header');
-header.style.borderBottom = '4px solid #ccc';
+// const header = document.querySelector('#main-header');
+// header.style.borderBottom = '4px solid #ccc';
 
-const input = document.querySelector('input'); // grabs first input by default
-input.value = 'Hello World';
+// const input = document.querySelector('input'); // grabs first input by default
+// input.value = 'Hello World';
 
-const submit = document.querySelector('input[type="submit"]');
-submit.value = 'Send';
+// const submit = document.querySelector('input[type="submit"]');
+// submit.value = 'Send';
 
-const item = document.querySelector('.list-group-item');
-item.style.color = 'red';
+// const item = document.querySelector('.list-group-item');
+// item.style.color = 'red';
 
-const lastItem = document.querySelector('.list-group-item:last-child');
-lastItem.style.color = 'blue';
+// const lastItem = document.querySelector('.list-group-item:last-child');
+// lastItem.style.color = 'blue';
 
-const secondItem = document.querySelector('.list-group-item:nth-child(2)');
-secondItem.style.color = 'coral';
+// const secondItem = document.querySelector('.list-group-item:nth-child(2)');
+// secondItem.style.color = 'coral';
+
+// querySelectorAll
+
+const titles = document.querySelectorAll('.title');
+
+console.log(titles);
+titles[0].textContent = 'Howdy';
+
+const odd = document.querySelectorAll('li:nth-child(odd)');
+const even = document.querySelectorAll('li:nth-child(even)');
+
+for (let i = 0; i < odd.length; i++) {
+  odd[i].style.backgroundColor = '#f4f4f4';
+  even[i].style.backgroundColor = '#ccc';
+}
