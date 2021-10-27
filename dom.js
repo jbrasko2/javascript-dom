@@ -103,12 +103,13 @@
 // box.addEventListener('mouseover', runEvent); // fires when hovering over content
 // box.addEventListener('mouseout', runEvent);
 
-const itemInput = document.querySelector('input[type="text"]');
-const form = document.querySelectorAll('form');
+// const itemInput = document.querySelector('input[type="text"]');
+// const form = document.querySelectorAll('form');
 
-itemInput.addEventListener('keydown', runEvent);
+// itemInput.addEventListener('keydown', runEvent);
 
-function runEvent(e) {
-  document.getElementById('output').innerHTML =
-    '<h3>' + e.target.value + '</h3>';
-}
+// function runEvent(e) {
+//   document.getElementById('output').innerHTML =
+//     '<h3>' + e.target.value + '</h3>';
+// }
+
